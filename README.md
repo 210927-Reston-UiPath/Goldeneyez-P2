@@ -2,7 +2,7 @@
 
 <h1> From the Revature UIPath training program, Goldeneyez presents __________, coming Novemeber 12th.</h1>
 <br>
-<h2>This project utilizes the following tech stacks:</h2>
+<h2>This project will utilize the following tech stacks:</h2>
 <h4>* UiPath Studio
 <p>
 <p>
