@@ -6,6 +6,5 @@
 <h4>* UiPath Studio
 <p>
 * PostgreSQL/SQL Server
-<p>
 * HTML, CSS, JS</h4>
 </h4>
