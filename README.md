@@ -5,7 +5,8 @@
 <h2>This project utilizes the following tech stacks:</h2>
 <h4>* UiPath Studio
 <p>
+<p>
 * PostgreSQL/SQL Server
-  <p>
+<p>
 * HTML, CSS, JS</h4>
 </h4>
