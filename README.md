@@ -1,1 +1,1 @@
-# PerfectDark-P2
+# Goldeneyez-P2
