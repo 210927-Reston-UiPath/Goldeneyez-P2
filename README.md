@@ -13,6 +13,8 @@
   <br>
   * Users must be able to enter a job in and have it search through jobs.
   <br>
+  * Must be able to add multiple users for searching jobs.
+  <br>
 </ul>
 </h4>
 
