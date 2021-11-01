@@ -7,19 +7,19 @@
 <h2>MVP</h2>
 <h4>
 <ul>
-  Program should use a filter activity to narrow down job search listings.
-  <p>
-  Users must be able to add their names to a search list.
-  <p>
-  Users must be able to enter a job in and have it search through jobs.
-  <p>
+  * Program should use a filter activity to narrow down job search listings.
+  <br>
+  * Users must be able to add their names to a search list.
+  <br>
+  * Users must be able to enter a job in and have it search through jobs.
+  <br>
 </ul>
 </h4>
 
 <h2>Stretch Goals</h2>
 <h4>
 <ul>
-  Any additional UX functionality to add to program effectiveness.
+  * Any additional UX functionality to add to program effectiveness.
 </ul>
 
 <h3>This project will utilize the following tech stacks:</h2>
