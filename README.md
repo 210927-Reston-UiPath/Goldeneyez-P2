@@ -8,7 +8,9 @@
 <h4>
 <ul>
   Program should use a filter activity to narrow down job search listings.
+  <p>
   Users must be able to add their names to a search list.
+  <p>
   Users must be able to enter a job in and have it search through jobs.
 </ul>
 </h4>
