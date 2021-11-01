@@ -20,6 +20,7 @@
 <h4>
 <ul>
   * Any additional UX functionality to add to program effectiveness.
+  * Check emails for call backs from recipients.
 </ul>
 
 <h3>This project will utilize the following tech stacks:</h2>
