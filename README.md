@@ -1,6 +1,6 @@
 # Goldeneyez-P2
 
-<h1> From the Revature UIPath training program, Goldeneyez presents (Job Finding App Name), coming Novemeber 12th.</h1>
+<h1> From the Revature UIPath training program, Goldeneyez presents (Job Searching Bot Name), coming Novemeber 12th.</h1>
 <br>
 <h3>This project will assist users in searching for jobs more relevant to their target field.</h2>
 
