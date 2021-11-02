@@ -1,35 +1,11 @@
-# Goldeneyez-P2
+##First of all, create a folder in your computer, which helps to organize your main and your own branch. 
 
-<h1> From the Revature UIPath training program, Goldeneyez presents JobHunter, coming Novemeber 12th.</h1>
-<br>
-<h3>This project will assist users in searching for jobs more relevant to their target field.</h2>
+##Second, clone the main branch and other branch via git bash. For example, git clone <URL from GitHub>
 
-<h2>MVP</h2>
-<h4>
-<ul>
-  * Program should use a filter activity to narrow down job search listings.
-  <br>
-  * Users must be able to add their names to a search list.
-  <br>
-  * Users must be able to enter a job in and have it search through jobs.
-  <br>
-  * Must be able to add multiple users for searching jobs.
-  <br>
-</ul>
-</h4>
+##Third, use VS code to open the folder that you cloned from GitHub, which could be either main or personal branch. This particular folder represents your branch that your just cloned from GitHub. 
 
-<h2>Stretch Goals</h2>
-<h4>
-<ul>
-  * Any additional UX functionality to add to program effectiveness.
-  * Check emails for call backs from recipients.
-</ul>
+##Next, you want to update your local repository. You have to make sure your file is in the folder(repository) that link with your cloud repository. Once, a file is added. Go back to VS code and add file to staged change and add commit. And you can synchronize your local folder(repository) with your cloud repository.
 
-<h3>This project will utilize the following tech stacks:</h2>
-<h4>* UiPath Studio
-<p>
-<p>
-* PostgreSQL/SQL Server
-<p>
-* HTML, CSS, JS</h4>
-</h4>
+Caution: Before you commit and push your files to the cloud repository, make sure you check the branch you want to push. Otherwise, there is chaos. How to check the branch? Check left bottom on VS code. 
+
+##If you want to pull or update your local repository, open the linked folder in VS code and click the cycle on the left bottom of VS code. That should do the job. 
