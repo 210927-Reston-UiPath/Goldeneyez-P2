@@ -5,23 +5,23 @@
 <h3>This project will assist users in searching for jobs more relevant to their target field.</h2>
 
 <h2>Client Story</h2>
-<h4>
+
 <ul>
   During the pandemic, our client got laid off from his current job. He has been trying to find a job for a while now, but with no luck. He checked each job site he was on weekly for new updates and even looked through his inbox for new emails back. He is getting tired of doing this after a long week at his temporary job and contacted us to see if we could automate the process so he wouldn’t have to do every step anymore.
 </ul>
-</h4>
+
 <h2>User Story</h2>
-<h4>
+
 <ul>
   A user can expect to input Name, Search Area, Job Title, Experience Required. An expected output would be a email with an excel attachment. The excel file would contain: job name, job description, job location, job experience, and job company.
 </ul>
-</h4>
+
 <h2>What Job Hunter is about</h2>
-<h4>
+
 <ul>
   Job Hunter relieves the stress for an individual of going to different job vendors and looking up jobs for their area. It outputs job listings from separate job sites and organizes them according to user input as well, so the client can go to the site and start applying for relevant jobs.
 </ul>
-</h4>
+
 
 <h2>MVP</h2>
 <h4>
@@ -64,4 +64,4 @@
   </ul>  
 </h4>
 <h4>Flow Char </h4>  
-![Flow Chart Diagram] (https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg)
+![Flow Chart Diagram](https://github.com/201019-UiPath/Jar-P2/blob/main/flowchart1.jpg)
