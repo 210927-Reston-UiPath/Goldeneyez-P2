@@ -64,4 +64,5 @@
   </ul>  
 </h4>
 <h4>Flow Chart </h4>  
-![Flow Chart Diagram] (https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/c37780b0d05a8300a92c1270879b32025b6326f4/Picture2.jpg)
+
+![Picture2](https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/f1356bcf5078cae63c1b8ab411db3c3ce0824065/images/Picture2.jpg)
