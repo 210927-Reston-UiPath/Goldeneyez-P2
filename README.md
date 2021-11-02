@@ -60,3 +60,5 @@
 <br>
 4.	Job sites to be scraped will be Indeed, Linkedin, GlassDoor, ZipRecruiter
 </h4>
+<h4>Flow Char </h4>  
+![alt text](https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg)
