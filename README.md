@@ -63,5 +63,5 @@
 4.	Job sites to be scraped will be Indeed, Linkedin, GlassDoor, ZipRecruiter
   </ul>  
 </h4>
-<h4>Flow Char </h4>  
-![Flow Chart Diagram](https://github.com/201019-UiPath/Jar-P2/blob/main/flowchart1.jpg)
+<h4>Flow Chart </h4>  
+![Flow Chart Diagram] (Picture2.jpg)
