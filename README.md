@@ -42,7 +42,7 @@
 </h4>
 
 <h2>Stretch Goals</h2>
-<h4>
+
 <ul>
   1.	Checking emails for call backs (if user allows).
   <br>
@@ -50,7 +50,8 @@
   <br>
 </ul>
 
-<h3>Constraints:</h2>
+<h3>Constraints:</h3>
+<ul>
 <h4>
 1.	User data and job data stored in a PostgreSQL.
 <br>
@@ -59,6 +60,7 @@
 3.	HTML, CSS, and JS used to interact with job vendors
 <br>
 4.	Job sites to be scraped will be Indeed, Linkedin, GlassDoor, ZipRecruiter
+  </ul>  
 </h4>
 <h4>Flow Char </h4>  
-![Flow Chart Diagram](https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg)
+![Flow Chart Diagram](https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg "Optional Title")
