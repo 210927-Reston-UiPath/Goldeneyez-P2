@@ -42,13 +42,14 @@
 </h4>
 
 <h2>Stretch Goals</h2>
-
+<h4>
 <ul>
   1.	Checking emails for call backs (if user allows).
   <br>
   2.	Filter out duplicate data from same vendor.
   <br>
 </ul>
+</h4>
 
 <h3>Constraints:</h3>
 <ul>
@@ -63,4 +64,4 @@
   </ul>  
 </h4>
 <h4>Flow Char </h4>  
-![Flow Chart Diagram](https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg "Optional Title")
+![Flow Chart Diagram] (https://github.com/210927-Reston-UiPath/Goldeneyez-P2/blob/main/Picture2.jpg)
