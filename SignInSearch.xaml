@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1091,1782</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1054,1782</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SignIn_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="29">
@@ -215,7 +215,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4863d040-ae15-4293-9603-3d1d962824a9" InformativeScreenshot="103b0fb58005e5ac448c4471460e3bdd" Selector="&lt;webctrl aaname='See all 4K jobs' parentid='Discover' tag='STRONG' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4863d040-ae15-4293-9603-3d1d962824a9" InformativeScreenshot="103b0fb58005e5ac448c4471460e3bdd" Selector="&lt;webctrl aaname='See all * jobs' parentid='Discover' tag='STRONG' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
