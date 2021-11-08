@@ -482,7 +482,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ScrapingData workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ScrapingData.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ScrapingData workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ScrapingDataForLinkedIn.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <scg:Dictionary x:TypeArguments="x:String, Argument" />
                           </ui:InvokeWorkflowFile.Arguments>
@@ -582,9 +582,7 @@
               <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Here are the job listings for LinkedIn for the Week" DisplayName="Send SMTP Mail Message" Email="mcgeemax569@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="McGee$23!" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="LinkedInJ Jobs" To="[clientEmail]">
                 <ui:SendMail.Files>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                    <InArgument x:TypeArguments="x:String">
-                      <Literal x:TypeArguments="x:String">c:/Revature/P2_C_Reed/Goldeneyez-P2/LinkedInJobs.xlsx</Literal>
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String">c:/Revature/P2_C_Reed/Goldeneyez-P2/LinkedInJobs.xlsx</InArgument>
                   </scg:List>
                 </ui:SendMail.Files>
               </ui:SendMail>
