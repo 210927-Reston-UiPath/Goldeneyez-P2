@@ -390,7 +390,9 @@
                               <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Here are some some available job postings on Ziprecruiter" DisplayName="Send SMTP Mail Message" Email="[emaillogin]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[passwordlogin]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Job Listings From Zipcruiter" To="[emaillogin]">
                                 <ui:SendMail.Files>
                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                    <InArgument x:TypeArguments="x:String">C:\Revature\Projects\Goldeneyez-P2\Goldeneyez-P2\Workflows\P2-WorkflowForZipRecruiter\exceltestsheet\ZipRecruiterData.xlsx</InArgument>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <Literal x:TypeArguments="x:String">C:\Revature\Projects\Goldeneyez-P2\Goldeneyez-P2\Workflows\P2-WorkflowForZipRecruiter\exceltestsheet\ZipRecruiterData.xlsx</Literal>
+                                    </InArgument>
                                   </scg:List>
                                 </ui:SendMail.Files>
                               </ui:SendMail>
