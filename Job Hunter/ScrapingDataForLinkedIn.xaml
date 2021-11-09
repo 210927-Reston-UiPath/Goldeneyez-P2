@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ScrapingData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1176,5669.6" sap2010:WorkflowViewState.IdRef="ScrapingData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ScrapingData" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="879.2,5605.6" sap2010:WorkflowViewState.IdRef="ScrapingData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -53,9 +53,16 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="889.6,5564.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ScrapingData" sap:VirtualizedContainerService.HintSize="889.6,5540.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="JobTable" />
     </Sequence.Variables>
@@ -64,7 +71,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="848,5472" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="848,5448" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="FirstJobName" />
         <Variable x:TypeArguments="x:String" Name="SecondJobName" />
@@ -74,13 +81,13 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Construct Page'" sap:VirtualizedContainerService.HintSize="806.4,5379.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="3d75a1bfaa4f0d19159df5222f850b80" Selector="&lt;html app='msedge.exe' omit:title='construction Jobs in San Francisco Bay Area | LinkedIn' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'Construct Page'" sap:VirtualizedContainerService.HintSize="806.4,5355.2" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="3d75a1bfaa4f0d19159df5222f850b80" Selector="&lt;html app='msedge.exe' omit:title='construction Jobs in San Francisco Bay Area | LinkedIn' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="772.8,5232" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="772.8,5208" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="Index" />
                 <Variable x:TypeArguments="sd:DataTable" Name="ExtractJobTitle" />
@@ -115,7 +122,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="5af1fc2247c4ab9e8ba56f1775aca36d" Selector="&lt;webctrl tag='DIV' class='jobs-search-two-pane__wrapper' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -127,7 +134,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="5af1fc2247c4ab9e8ba56f1775aca36d" Selector="&lt;webctrl tag='DIV' class='jobs-search-two-pane__wrapper' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -139,7 +146,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="5af1fc2247c4ab9e8ba56f1775aca36d" Selector="&lt;webctrl tag='DIV' class='jobs-search-two-pane__wrapper' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -151,7 +158,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="5af1fc2247c4ab9e8ba56f1775aca36d" Selector="&lt;webctrl tag='DIV' class='jobs-search-two-pane__wrapper' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -163,7 +170,7 @@
                   </ui:Target>
                 </ui:SendHotkey.Target>
               </ui:SendHotkey>
-              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,156" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV'" sap:VirtualizedContainerService.HintSize="731.2,154.4" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="sub" KeyModifiers="Ctrl" SendWindowMessages="True" SpecialKey="True">
                 <ui:SendHotkey.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="07c3e8fb-1873-467e-a1dd-40ad430f2a03" InformativeScreenshot="5af1fc2247c4ab9e8ba56f1775aca36d" Selector="&lt;webctrl tag='DIV' class='jobs-search-two-pane__wrapper' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -184,13 +191,13 @@
                   </ui:Target>
                 </ui:ExtractData.Target>
               </ui:ExtractData>
-              <ui:ForEachRow CurrentIndex="[Index]" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="731.2,2884.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[Index]" DataTable="[ExtractDataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="731.2,2868.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="681.6,2736" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="681.6,2748" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="JobTitle" />
                         <Variable x:TypeArguments="x:String" Name="JobLocale" />
@@ -212,7 +219,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="640,348.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="640,351.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -290,7 +297,7 @@
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
-                      <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="640,60" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[&quot;https://www.linkedin.com/&quot; + jobURL]" />
+                      <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="640,60" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[jobURL]" />
                       <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="640,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
                         <ui:GetValue.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="702b3794-71f2-415c-b064-ab618ac02107" InformativeScreenshot="955154e6d2d220c714f0692f0a6e3450" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span' idx='1' isleaf='1' tag='SPAN' /&gt;">
@@ -333,7 +340,7 @@
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
-                      <If Condition="[elementJobType = True]" sap:VirtualizedContainerService.HintSize="640,256.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[elementJobType = True]" sap:VirtualizedContainerService.HintSize="640,266.4" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
                           <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
                             <ui:GetValue.Target>
