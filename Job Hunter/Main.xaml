@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="784,2540.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="784,3208" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
@@ -98,7 +98,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Job Hunters" sap:VirtualizedContainerService.HintSize="628.8,2476" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Job Hunters" sap:VirtualizedContainerService.HintSize="633.6,3143.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="serverDB" />
       <Variable x:TypeArguments="x:String" Name="firstinput" />
@@ -115,13 +115,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:DatabaseConnect DatabaseConnection="[serverDB]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="587.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=P2_SQL" />
-    <ui:InputDialog OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="587.2,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What do you want to do?" Options="[{&quot;Add new Client&quot;,&quot;Delete existed Client&quot;,&quot;Job Searching&quot;,&quot;Exit&quot;}]">
+    <ui:DatabaseConnect DatabaseConnection="[serverDB]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="592,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=P2_SQL" />
+    <ui:InputDialog OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="592,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What do you want to do?" Options="[{&quot;Add new Client&quot;,&quot;Delete existed Client&quot;,&quot;Job Searching&quot;,&quot;Exit&quot;}]">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[firstinput]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[firstinput]" sap:VirtualizedContainerService.HintSize="587.2,1948" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[firstinput]" sap:VirtualizedContainerService.HintSize="592,2615.2" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,7 +218,7 @@
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ufa:FormActivity.FormFieldsCollection>
       </ufa:FormActivity>
-      <Sequence x:Key="Job Searching" sap:VirtualizedContainerService.HintSize="547.2,1691.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence x:Key="Job Searching" sap:VirtualizedContainerService.HintSize="552,2358.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="users" />
           <Variable x:TypeArguments="sd:DataTable" Name="userlogin" />
@@ -229,17 +229,17 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[users]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="505.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="select * from users">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[users]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="510.4,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="select * from users">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
         </ui:ExecuteQuery>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[userlogin]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="505.6,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="select * from userlogin">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[userlogin]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="510.4,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_3" Sql="select * from userlogin">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
         </ui:ExecuteQuery>
-        <ui:JoinDataTables DataTable1="[users]" DataTable2="[userlogin]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="505.6,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[jointable]">
+        <ui:JoinDataTables DataTable1="[users]" DataTable2="[userlogin]" DisplayName="Join Data Tables" sap:VirtualizedContainerService.HintSize="510.4,60" sap2010:WorkflowViewState.IdRef="JoinDataTables_1" JoinType="Inner" OutputDataTable="[jointable]">
           <ui:JoinDataTables.Arguments>
             <scg:List x:TypeArguments="ui:JoinOperationArgument" Capacity="4">
               <ui:JoinOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EQ">
@@ -253,13 +253,13 @@
             </scg:List>
           </ui:JoinDataTables.Arguments>
         </ui:JoinDataTables>
-        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[jointable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="505.6,1239.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[jointable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510.4,1906.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
           <ui:ForEachRow.Body>
             <ActivityAction x:TypeArguments="sd:DataRow">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="472,1118.4" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,1785.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:QueueItem" Name="loginInfo" />
                   <Variable x:TypeArguments="x:String" Name="passwordlinkedin" />
@@ -271,36 +271,20 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="430.4,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="ClientsLogin">
+                <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="ClientsLogin">
                   <ui:AddQueueItem.ItemInformation>
-                    <InArgument x:TypeArguments="x:String" x:Key="username">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row.Item(&quot;username&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="useremail">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row.Item(&quot;useremail&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="passwordindeed">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Row.item(&quot;pwforindeed&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Job">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row.Item(&quot;userjob&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="location">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row.item(&quot;userlocation&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="passwordlinkedin">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Row.item(&quot;pwforlinkedin&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="passwordglassdoor">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Row.item(&quot;pwforglassdoor&quot;).ToString" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="passwordzip">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Row.item(&quot;pwforziprecruiter&quot;).ToString" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="username">[row.Item("username").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="useremail">[row.Item("useremail").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="passwordindeed">[Row.item("pwforindeed").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Job">[row.Item("userjob").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="location">[row.item("userlocation").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="passwordlinkedin">[Row.item("pwforlinkedin").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="passwordglassdoor">[Row.item("pwforglassdoor").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="passwordzip">[Row.item("pwforziprecruiter").ToString]</InArgument>
                   </ui:AddQueueItem.ItemInformation>
                 </ui:AddQueueItem>
-                <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" sap:VirtualizedContainerService.HintSize="430.4,22.4" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="ClientsLogin" TransactionItem="[loginInfo]" />
-                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,319.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get Transaction Item" sap:VirtualizedContainerService.HintSize="435.2,22.4" sap2010:WorkflowViewState.IdRef="GetQueueItem_1" QueueType="ClientsLogin" TransactionItem="[loginInfo]" />
+                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="435.2,319.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
@@ -376,11 +360,70 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke indeed workflow" sap:VirtualizedContainerService.HintSize="430.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="indeed.xaml">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,284.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke indeed workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="indeed.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="serverDB">[serverDB]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="username">[username]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="useremail">[useremail]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="password">[passwordindeed]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="location">[location]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="job">[job]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,284.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LinkedIn workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="LinkedIn.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="serverDB">[serverDB]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="username">[username]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="useremail">[useremail]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="password">[passwordlinkedin]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="job">[job]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="location">[location]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,284.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ZipRecruiter workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ZipRecruiter.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="username">[username]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="useremail">[useremail]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="password">[passwordzip]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="job">[job]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="location">[location]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                </ui:CommentOut>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GlassDoor workflow" sap:VirtualizedContainerService.HintSize="435.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="GlassDoor.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="serverDB">
-                      <mva:VisualBasicValue x:TypeArguments="ui:DatabaseConnection" ExpressionText="serverDB" />
-                    </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="username">
                       <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="username" />
                     </InArgument>
@@ -388,29 +431,7 @@
                       <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="useremail" />
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="password">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="passwordindeed" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="location">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="location" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="job">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="job" />
-                    </InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke LinkedIn workflow" sap:VirtualizedContainerService.HintSize="430.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="LinkedIn.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="ui:DatabaseConnection" x:Key="serverDB">
-                      <mva:VisualBasicValue x:TypeArguments="ui:DatabaseConnection" ExpressionText="serverDB" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="username">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="username" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="useremail">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="useremail" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="password">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="passwordlinkedin" />
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="passwordglassdoor" />
                     </InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="job">
                       <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="job" />
@@ -420,26 +441,7 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ZipRecruiter workflow" sap:VirtualizedContainerService.HintSize="430.4,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ZipRecruiter.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="username">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="username" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="useremail">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="useremail" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="password">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="passwordzip" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="job">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="job" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="location">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="location" />
-                    </InArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
-                <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="430.4,80.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[loginInfo]">
+                <ui:SetTransactionStatus ContinueOnError="{x:Null}" Reason="{x:Null}" ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful" TransactionItem="[loginInfo]">
                   <ui:SetTransactionStatus.Analytics>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                   </ui:SetTransactionStatus.Analytics>
