@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="784,3208" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1054,831" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
@@ -97,7 +97,7 @@
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Job Hunters" sap:VirtualizedContainerService.HintSize="633.6,3143.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Job Hunters" sap:VirtualizedContainerService.HintSize="539,726" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="serverDB" />
       <Variable x:TypeArguments="x:String" Name="firstinput" />
@@ -114,26 +114,26 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:DatabaseConnect DatabaseConnection="[serverDB]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="592,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=P2_SQL" />
-    <ui:InputDialog OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="592,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What do you want to do?" Options="[{&quot;Add new Client&quot;,&quot;Delete existed Client&quot;,&quot;Job Searching&quot;,&quot;Exit&quot;}]">
+    <ui:DatabaseConnect DatabaseConnection="[serverDB]" DisplayName="Connect" sap:VirtualizedContainerService.HintSize="497,59" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="System.Data.Odbc" ConnectionString="Dsn=P2PostgreSQL" />
+    <ui:InputDialog OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="497,291" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="What do you want to do?" Options="[{&quot;Add new Client&quot;,&quot;Delete existed Client&quot;,&quot;Job Searching&quot;,&quot;Exit&quot;}]">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[firstinput]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[firstinput]" sap:VirtualizedContainerService.HintSize="592,2615.2" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[firstinput]" sap:VirtualizedContainerService.HintSize="497,204" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence x:Key="Add new Client" sap:VirtualizedContainerService.HintSize="632,1647.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+      <Sequence x:Key="Add new Client" sap:VirtualizedContainerService.HintSize="633,1606" sap2010:WorkflowViewState.IdRef="Sequence_19">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="590.4,1554.4" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="591,1554" sap2010:WorkflowViewState.IdRef="CommentOut_10">
           <ui:CommentOut.Body>
             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="555.2,1476" sap2010:WorkflowViewState.IdRef="Sequence_24">
               <sap:WorkflowViewStateService.ViewState>
@@ -259,7 +259,7 @@
           </ui:CommentOut.Body>
         </ui:CommentOut>
       </Sequence>
-      <Sequence x:Key="Job Searching" sap:VirtualizedContainerService.HintSize="552,2358.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence x:Key="Job Searching" sap:VirtualizedContainerService.HintSize="552,2356" sap2010:WorkflowViewState.IdRef="Sequence_4">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="users" />
           <Variable x:TypeArguments="sd:DataTable" Name="userlogin" />
@@ -270,7 +270,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[users]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="510.4,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="select * from users">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[users]" DisplayName="Execute Query" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="510,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="select * from users">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>
@@ -485,8 +485,8 @@
           </ui:ForEachRow.Body>
         </ui:ForEachRow>
       </Sequence>
-      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" x:Key="Exit" AutoCloseAfter="00:00:00" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Exit&quot;]" />
-      <Sequence x:Key="Delete existed Client" sap:VirtualizedContainerService.HintSize="452,781.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" x:Key="Exit" AutoCloseAfter="00:00:00" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Exit&quot;]" />
+      <Sequence x:Key="Delete existed Client" sap:VirtualizedContainerService.HintSize="452,779" sap2010:WorkflowViewState.IdRef="Sequence_8">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="showusers" />
           <Variable x:TypeArguments="x:String" Name="checkid" />
@@ -496,7 +496,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[getusers]" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="410.4,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select * from users">
+        <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[getusers]" ExistingDbConnection="[serverDB]" sap:VirtualizedContainerService.HintSize="410,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1" Sql="select * from users">
           <ui:ExecuteQuery.Parameters>
             <scg:Dictionary x:TypeArguments="x:String, Argument" />
           </ui:ExecuteQuery.Parameters>

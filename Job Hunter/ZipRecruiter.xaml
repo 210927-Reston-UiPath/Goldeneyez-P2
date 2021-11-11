@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>784,5600</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>832,4895</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ZipRecruiter_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -51,6 +51,7 @@
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -84,15 +85,21 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ZipRecruiter" sap:VirtualizedContainerService.HintSize="710.4,5535.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ZipRecruiter" sap:VirtualizedContainerService.HintSize="636,4790" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="ZipRecruiterLogin" sap:VirtualizedContainerService.HintSize="668.8,5442.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <Sequence DisplayName="ZipRecruiterLogin" sap:VirtualizedContainerService.HintSize="594,4698" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="loginInfo" />
         <Variable x:TypeArguments="x:String" Name="clientID" />
@@ -108,13 +115,14 @@
         <Variable x:TypeArguments="sd:DataTable" Name="jobDescription" />
         <Variable x:TypeArguments="sd:DataTable" Name="jobUrl" />
         <Variable x:TypeArguments="ui:DatabaseConnection" Name="p2DatabaseConnection" />
+        <Variable x:TypeArguments="sd:DataTable" Name="jobType" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="627.2,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="552,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -136,7 +144,7 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="627.2,164" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="552,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
         <ui:MultipleAssign.AssignOperations>
           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -168,40 +176,37 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="627.2,4973.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.ziprecruiter.com">
+      <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="552,4233" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://www.ziprecruiter.com">
         <ui:OpenBrowser.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="593.6,4871.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518,4132" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="552,4778.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="476,4040" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'JobSearch Page'" sap:VirtualizedContainerService.HintSize="510.4,4685.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="607d4cb2c1515d9fbc3f4d27b5c05714" Selector="&lt;html app='msedge.exe' /&gt;&#xA;">
+                <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'JobSearch Page'" sap:VirtualizedContainerService.HintSize="434,3948" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="607d4cb2c1515d9fbc3f4d27b5c05714" Selector="&lt;html app='msedge.exe' /&gt;&#xA;">
                   <ui:BrowserScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476.8,4538.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="sd:DataTable" Name="jobType" />
-                        </Sequence.Variables>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,3802" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="GotoSignInPage" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="GotoSignInPage" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="26" OffsetY="8" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -213,7 +218,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="EnterUserEmailForLogin" EmptyField="False" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[emaillogin]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="EnterUserEmailForLogin" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[emaillogin]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ec6357c7-d12e-42af-a6c6-719ff5d1f5a9" InformativeScreenshot="6401f49188eea8ac80c6c5ce1692e392" Selector="&lt;webctrl tag='INPUT' type='email' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -222,7 +227,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="EnterUserPasswordForLogin" EmptyField="False" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[passwordlogin]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="EnterUserPasswordForLogin" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[passwordlogin]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ebb77cbd-c54e-49bb-afab-c1c9c43ad711" InformativeScreenshot="5e69f6ac4b288cd4e9e754ef3de438aa" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -231,7 +236,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickSignInbutton" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickSignInbutton" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="135" OffsetY="28" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -243,7 +248,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="SearchTermForJobType" EmptyField="False" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[clientJob]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="SearchTermForJobType" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[clientJob]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="076645af-1808-48e6-9d77-33e02c114003" InformativeScreenshot="b760fbc1781e69479a673ea4b5791b66" Selector="&lt;webctrl id='search1' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -252,7 +257,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  location1'" EmptyField="False" sap:VirtualizedContainerService.HintSize="435.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[clientLocation]">
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  location1'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[clientLocation]">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb5edf4b-6160-4361-aafe-b26d42fc8453" InformativeScreenshot="120c5504266f708500bd36bc636103b7" Selector="&lt;webctrl id='location1' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -261,7 +266,7 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'INPUT'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Action Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="49" OffsetY="7" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -273,7 +278,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobTitle]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobTitle' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h2' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="10" SimulateClick="True">
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobTitle]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobTitle' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h2' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="10" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="30f4bd7f-9fcb-45eb-be9a-678781eb7c89" InformativeScreenshot="83502c360a25e94d323c4d70ce89433f" Selector="&lt;webctrl id='job_list' tag='DIV' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' /&gt;&#xA;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -282,9 +287,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobTitle]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobTitle]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobCompany]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobCompany' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="10" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobTitle]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_7" SheetName="ZipRecruiter" StartingCell="A1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobTitle]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobCompany]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobCompany' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="10" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="596830e6-3428-4555-8728-873ac2e4bf51" InformativeScreenshot="98e3c68760e41881c32f641463631110" Selector="&lt;webctrl id='job_list' tag='DIV' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' /&gt;&#xA;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -293,9 +298,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobCompany]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="B1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobCompany]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobLocation]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobLocation' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='a' idx='2'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="10" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobCompany]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="ZipRecruiter" StartingCell="B1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobCompany]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_2" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobLocation]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobLocation' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='a' idx='2'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_3" MaxNumberOfResults="10" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e3fbb59d-7ff7-4026-9923-80517192fd9d" InformativeScreenshot="98e3c68760e41881c32f641463631110" Selector="&lt;webctrl id='job_list' tag='DIV' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' /&gt;&#xA;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -304,9 +309,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobLocation]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" StartingCell="C1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobLocation]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_3" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobType]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobType' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='section' idx='2'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobLocation]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="ZipRecruiter" StartingCell="C1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobLocation]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_3" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobType]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobType' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='section' idx='2'/&gt;&lt;webctrl tag='p' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_4" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29a51219-aec9-4d62-ad93-85f6fb768f17" InformativeScreenshot="e2eea2322e2b2e2eb792ad5025c444a8" Selector="&lt;webctrl id='job_list' tag='DIV' /&gt;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -315,9 +320,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobType]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" StartingCell="D1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobType]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_4" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobDescription]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobDescription' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='p'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="10" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobType]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="ZipRecruiter" StartingCell="D1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobType]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_4" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobDescription]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobDescription' attr='text'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='3'/&gt;&lt;webctrl tag='p'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="10" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="283d4752-7717-46f8-95d9-63dcac9f3e61" InformativeScreenshot="98e3c68760e41881c32f641463631110" Selector="&lt;webctrl id='job_list' tag='DIV' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' /&gt;&#xA;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -326,9 +331,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobDescription]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Sheet1" StartingCell="E1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobDescription]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_5" />
-                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobUrl]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobUrl' attr='href'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h2' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="10" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobDescription]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="ZipRecruiter" StartingCell="E1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobDescription]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_5" />
+                        <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[jobUrl]" DisplayName="Extract Structured Data 'DIV  job_list'" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='jobUrl' attr='href'&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='article'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='a' idx='1'/&gt;&lt;webctrl tag='h2' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="10" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b0dbada-4a41-4888-8795-bc215da534cc" InformativeScreenshot="98e3c68760e41881c32f641463631110" Selector="&lt;webctrl id='job_list' tag='DIV' css-selector='body&amp;gt;main&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' /&gt;&#xA;" WaitForReady="COMPLETE">
                               <ui:Target.TimeoutMS>
@@ -337,9 +342,9 @@
                             </ui:Target>
                           </ui:ExtractData.Target>
                         </ui:ExtractData>
-                        <ui:WriteRange AddHeaders="True" DataTable="[jobUrl]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="435.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Sheet1" StartingCell="F1" WorkbookPath="exceltestsheet\ZipRecruiterData.xlsx" />
-                        <ui:ClearDataTable DataTable="[jobUrl]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="435.2,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_6" />
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickDropDown" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:WriteRange AddHeaders="True" DataTable="[jobUrl]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="ZipRecruiter" StartingCell="F1" WorkbookPath="C:\Users\JP\Desktop\Programming\Revature\Revature UIPath Batch\Goldeneyez-P2-main\Job Hunter\exceltestsheet\JobExcel.xlsx" />
+                        <ui:ClearDataTable DataTable="[jobUrl]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_6" />
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickDropDown" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="21" OffsetY="31" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -351,7 +356,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickSignOut" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ClickSignOut" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition OffsetX="72" OffsetY="15" Position="TopLeft" />
                           </ui:Click.CursorPosition>
@@ -363,25 +368,7 @@
                             </ui:Target>
                           </ui:Click.Target>
                         </ui:Click>
-                        <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe Job'" sap:VirtualizedContainerService.HintSize="435.2,107.2" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="e692314f3ea2e886d4773922a27261eb" WaitForReady="INTERACTIVE" />
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,317.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                          <ui:CommentOut.Body>
-                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,239.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Here are some some available job postings on Ziprecruiter" DisplayName="Send SMTP Mail Message" Email="[emaillogin]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[passwordlogin]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Job Listings From Zipcruiter" To="[emaillogin]">
-                                <ui:SendMail.Files>
-                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                    <InArgument x:TypeArguments="x:String">C:/Backup For Rev/P2_C_Reed/Goldeneyez-P2/P2/LoggingIntoLinkedin/exceltestsheet/LinkedInJobs.xlxs</InArgument>
-                                  </scg:List>
-                                </ui:SendMail.Files>
-                              </ui:SendMail>
-                            </Sequence>
-                          </ui:CommentOut.Body>
-                        </ui:CommentOut>
+                        <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'msedge.exe Job'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="e692314f3ea2e886d4773922a27261eb" WaitForReady="INTERACTIVE" />
                       </Sequence>
                     </ActivityAction>
                   </ui:BrowserScope.Body>
