@@ -13,7 +13,7 @@
   <sap:VirtualizedContainerService.HintSize>784,753.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AccessToDataBase_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="49">
+    <scg:List x:TypeArguments="x:String" Capacity="50">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -63,10 +63,11 @@
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -100,7 +101,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="AccessToDataBase" sap:VirtualizedContainerService.HintSize="472,688.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -108,6 +108,7 @@
       <Variable x:TypeArguments="x:String" Name="show" />
       <Variable x:TypeArguments="sd:DataTable" Name="login" />
       <Variable x:TypeArguments="ss:SecureString" Name="password1" />
+      <Variable x:TypeArguments="x:Boolean" Name="repeat" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
